@@ -15,7 +15,31 @@ class ViewController: UIViewController {
     @IBOutlet var txtTeam1: UITextField!
     @IBOutlet var txtTeam2: UITextField!
     
-    var timer:NSTimer!
+    
+    
+    var TwityFour:NSTimer!
+    var Sixty:NSTimer!
+    var TweleveMinute:NSTimer!
+    var DateTime:NSTimer!
+    
+    var twityfour:Int = 24
+    var tweleveminute:Int = 720
+    var sixty_:Int = 60
+    
+    @IBOutlet weak var twity_four: UILabel!
+    @IBOutlet weak var Sixty_jishi: UILabel!
+    
+    
+    
+    @IBOutlet weak var Score1: UITextField!
+    @IBOutlet weak var Score2: UITextField!
+    
+    @IBOutlet weak var Pause1: UITextField!
+    @IBOutlet weak var Pause2: UITextField!
+    
+    
+    @IBOutlet weak var Rule1: UITextField!
+    @IBOutlet weak var Rule2: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +53,11 @@ class ViewController: UIViewController {
     }
     
     //点击保存
-    @IBAction func saveClicked(sender: AnyObject) {
+    @IBAction func StartMatch(sender: AnyObject) {
+        Score1.text = "000"
+        Score2.text = "000"
+        
+        tf()
         saveUser()
     }
     //显示保存结果
@@ -72,7 +100,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
+    //实现鼠标点击textfield控件，textfield中的提示信息消失
     func textFieldShouldReturn(txtTeam1: UITextField!) -> Bool
     {
         txtTeam1.resignFirstResponder()
@@ -82,25 +110,68 @@ class ViewController: UIViewController {
     //当暂停或者犯规后，使用24回表功能
     
     
-    //计时
-    // 启用计时器，控制每秒执行一次tickDown方法
-    /*timer = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tickDown"),userInfo:nil,repeats:true)
-}
+    
+    func tf() {
+        //24秒计时
+        // 启用计时器，控制每秒执行一次tickDown方法
+        TwityFour = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tickDown"),userInfo:nil,repeats:true)
+        
+    }
+    
 
-//计时器每秒触发事件
+    @IBAction func twity_four_Stop(sender: AnyObject) {
+        TwityFour.invalidate()
+        
+    }
+    //计时器每秒触发事件
+    
+    func tickDown()
+    {
+        twityfour--
+        
+        let sec = twityfour%60
+        twity_four.text = String(sec)
+        if twityfour==1 {
+            twityfour = 24
+        }
+        //看电脑上有无代码
+        
+    }
+    
+    
+    func Wait() {
+        //60秒计时
+        // 启用计时器，控制每秒执行一次tickDown方法
+        TwityFour = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tick"),userInfo:nil,repeats:true)
+    }
+    
+    func tick() {
+        sixty_--
+        let sec = sixty_%60
+        Sixty_jishi.text = String(sec)
+    }
+    
+    @IBAction func HuiBiao(sender: UIButton) {
+        twityfour = 25
+    }
 
-func tickDown()
-{
-    print("tick...")
-}
-//停止计时
-timer.invalidate()
-if remainingSeconds <= 0 {
-let alert = UIAlertView()
-alert.title = "计时完成！"
-alert.message = ""
-alert.addButtonWithTitle("OK")
-alert.show()*/
+    //停止计时
+    //TwityFour.invalidate()
+    /*
+    if remainingSeconds <= 0 {
+    let alert = UIAlertView()
+    alert.title = "计时完成！"
+    alert.message = ""
+    alert.addButtonWithTitle("OK")
+    alert.show()*/
+    
+    
+    
+    
+    @IBAction func Continue(sender: AnyObject) {
+        tf()
+        Wait()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
