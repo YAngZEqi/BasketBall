@@ -14,6 +14,11 @@
 		121E3C111D1BEDCE00AB6608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121E3C0F1D1BEDCE00AB6608 /* LaunchScreen.storyboard */; };
 		121E3C1C1D1BEDCE00AB6608 /* BasketBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C1B1D1BEDCE00AB6608 /* BasketBallTests.swift */; };
 		121E3C271D1BEDCE00AB6608 /* BasketBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C261D1BEDCE00AB6608 /* BasketBallUITests.swift */; };
+		121E3C351D1BEE2000AB6608 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 121E3C341D1BEE2000AB6608 /* libsqlite3.0.tbd */; };
+		121E3C381D1BEF4700AB6608 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 121E3C371D1BEF4700AB6608 /* data.db */; };
+		121E3C3F1D1BEFAA00AB6608 /* SQLiteDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C3C1D1BEFAA00AB6608 /* SQLiteDB.swift */; };
+		121E3C401D1BEFAA00AB6608 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C3D1D1BEFAA00AB6608 /* SQLTable.swift */; };
+		121E3C411D1BEFAA00AB6608 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C3E1D1BEFAA00AB6608 /* String-Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,12 @@
 		121E3C221D1BEDCE00AB6608 /* BasketBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		121E3C261D1BEDCE00AB6608 /* BasketBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketBallUITests.swift; sourceTree = "<group>"; };
 		121E3C281D1BEDCE00AB6608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		121E3C341D1BEE2000AB6608 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		121E3C361D1BEE6D00AB6608 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		121E3C371D1BEF4700AB6608 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.db; path = ../../Downloads/hangge_645/data.db; sourceTree = "<group>"; };
+		121E3C3C1D1BEFAA00AB6608 /* SQLiteDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteDB.swift; path = ../../Downloads/hangge_645/SQLiteDB/SQLiteDB.swift; sourceTree = "<group>"; };
+		121E3C3D1D1BEFAA00AB6608 /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLTable.swift; path = ../../Downloads/hangge_645/SQLiteDB/SQLTable.swift; sourceTree = "<group>"; };
+		121E3C3E1D1BEFAA00AB6608 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String-Extras.swift"; path = "../../Downloads/hangge_645/SQLiteDB/String-Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E3C351D1BEE2000AB6608 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +89,9 @@
 		121E3BFA1D1BEDCE00AB6608 = {
 			isa = PBXGroup;
 			children = (
+				121E3C3B1D1BEF8600AB6608 /* SQLiteDB */,
+				121E3C371D1BEF4700AB6608 /* data.db */,
+				121E3C341D1BEE2000AB6608 /* libsqlite3.0.tbd */,
 				121E3C051D1BEDCE00AB6608 /* BasketBall */,
 				121E3C1A1D1BEDCE00AB6608 /* BasketBallTests */,
 				121E3C251D1BEDCE00AB6608 /* BasketBallUITests */,
@@ -103,6 +118,7 @@
 				121E3C0D1D1BEDCE00AB6608 /* Assets.xcassets */,
 				121E3C0F1D1BEDCE00AB6608 /* LaunchScreen.storyboard */,
 				121E3C121D1BEDCE00AB6608 /* Info.plist */,
+				121E3C361D1BEE6D00AB6608 /* Header.h */,
 			);
 			path = BasketBall;
 			sourceTree = "<group>";
@@ -123,6 +139,16 @@
 				121E3C281D1BEDCE00AB6608 /* Info.plist */,
 			);
 			path = BasketBallUITests;
+			sourceTree = "<group>";
+		};
+		121E3C3B1D1BEF8600AB6608 /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				121E3C3C1D1BEFAA00AB6608 /* SQLiteDB.swift */,
+				121E3C3D1D1BEFAA00AB6608 /* SQLTable.swift */,
+				121E3C3E1D1BEFAA00AB6608 /* String-Extras.swift */,
+			);
+			name = SQLiteDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				121E3C111D1BEDCE00AB6608 /* LaunchScreen.storyboard in Resources */,
+				121E3C381D1BEF4700AB6608 /* data.db in Resources */,
 				121E3C0E1D1BEDCE00AB6608 /* Assets.xcassets in Resources */,
 				121E3C0C1D1BEDCE00AB6608 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121E3C411D1BEFAA00AB6608 /* String-Extras.swift in Sources */,
+				121E3C3F1D1BEFAA00AB6608 /* SQLiteDB.swift in Sources */,
+				121E3C401D1BEFAA00AB6608 /* SQLTable.swift in Sources */,
 				121E3C091D1BEDCE00AB6608 /* ViewController.swift in Sources */,
 				121E3C071D1BEDCE00AB6608 /* AppDelegate.swift in Sources */,
 			);
@@ -400,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.imnu.www.BasketBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangzhiquan/Desktop/BasketBall/BasketBall/Header.h;
 			};
 			name = Debug;
 		};
@@ -411,6 +442,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.imnu.www.BasketBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yangzhiquan/Desktop/BasketBall/BasketBall/Header.h;
 			};
 			name = Release;
 		};
