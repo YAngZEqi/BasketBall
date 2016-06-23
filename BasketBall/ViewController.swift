@@ -41,6 +41,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var Rule1: UITextField!
     @IBOutlet weak var Rule2: UITextField!
     
+    @IBOutlet weak var Sevenhum: UILabel!
+    
+    
+    @IBOutlet weak var time: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +62,8 @@ class ViewController: UIViewController {
         Score2.text = "000"
         
         tf()
-        saveUser()
+        Match_Time()
+        //saveUser()
     }
     //显示保存结果
     @IBAction func Show(sender: AnyObject) {
@@ -128,7 +133,6 @@ class ViewController: UIViewController {
     func tickDown()
     {
         twityfour--
-        
         let sec = twityfour%60
         twity_four.text = String(sec)
         if twityfour==1 {
@@ -141,26 +145,53 @@ class ViewController: UIViewController {
     
     func Wait() {
         //60秒计时
-        // 启用计时器，控制每秒执行一次tickDown方法
+        // 启用计时器，控制每秒执行一次tick方法
         TwityFour = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tick"),userInfo:nil,repeats:true)
     }
     
     func tick() {
         sixty_--
         let sec = sixty_%60
-        Sixty_jishi.text = String(sec)
+        let min = sixty_/60
+        Sixty_jishi.text = String(min) + ":" + String(sec)
+        
+    }
+    
+    func Match_Time() {
+        //720秒计时
+        // 启用计时器，控制每秒执行一次tick方法
+        TweleveMinute = NSTimer.scheduledTimerWithTimeInterval(1,target:self,selector:Selector("tickd"),userInfo:nil,repeats:true)
+    }
+    
+    func tickd() {
+        
+        tweleveminute--
+        let sec = tweleveminute%60
+        let min = tweleveminute/60
+        Sevenhum.text = String(min) + ":" + String(sec)
+        
     }
     
     @IBAction func HuiBiao(sender: UIButton) {
-        twityfour = 25
+        twityfour = 24
     }
+    
+    
+    func CurrentTime() {
+        var date = NSDate()
+        var timeFormatter = NSDateFormatter()
+        timeFormatter.dateFormat = "yyy-MM-dd 'at' HH:mm:ss.SSS"
+        var strNowTime = timeFormatter.stringFromDate(date) as String
+        
+    }
+    
 
     //停止计时
     //TwityFour.invalidate()
     /*
     if remainingSeconds <= 0 {
     let alert = UIAlertView()
-    alert.title = "计时完成！"
+    alert.title = "计时完成,进入下一节比赛！"
     alert.message = ""
     alert.addButtonWithTitle("OK")
     alert.show()*/
@@ -169,9 +200,37 @@ class ViewController: UIViewController {
     
     
     @IBAction func Continue(sender: AnyObject) {
+        //24秒计时
         tf()
+        //等待时间计时
         Wait()
     }
+    
+    
+    @IBAction func Pause1(sender: AnyObject) {
+        //暂停之后，24秒暂停看是谁的球权；比赛时间暂停；当前时间继续；等待时间计时开始；当前队伍暂停计数加1
+        twity_four.text = "24"
+        TweleveMinute.invalidate()
+        
+    }
+    
+    @IBAction func Pause2(sender: AnyObject) {
+        //暂停之后，24秒暂停看是谁的球权；比赛时间暂停；当前时间继续；等待时间计时开始；当前队伍暂停计数加1
+        twity_four.text = "24"
+        TweleveMinute.invalidate()
+        
+    }
+    
+    @IBAction func Rule1(sender: AnyObject) {
+        //犯规之后，24秒暂停看是谁的球权；比赛时间暂停；当前时间继续；等待时间计时开始；当前队伍犯规计数加1
+        
+    }
+    
+    @IBAction func Rule2(sender: AnyObject) {
+        //犯规之后，24秒暂停看是谁的球权；比赛时间暂停；当前时间继续；等待时间计时开始；当前队伍犯规计数加1
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
