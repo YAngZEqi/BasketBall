@@ -178,6 +178,7 @@ class ViewController: UIViewController {
     
     
     func CurrentTime() {
+        //获取系统的当前时间
         var date = NSDate()
         var timeFormatter = NSDateFormatter()
         timeFormatter.dateFormat = "yyy-MM-dd 'at' HH:mm:ss.SSS"
