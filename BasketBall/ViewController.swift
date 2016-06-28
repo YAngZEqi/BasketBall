@@ -26,9 +26,22 @@ class ViewController: UIViewController {
     var tweleveminute:Int = 720
     var sixty_:Int = 60
     
+    var operation:String = ""
+    
+    
+    var grade1:Int=0;
+    var grade2:Int=0;
+    var cancel1:Int=0;
+    var cancel2:Int=0;
+    
+    var rule_1:Int=0;
+    var rule_2:Int=0;
+    var pause_1:Int=0;
+    var pause_2:Int=0;
     @IBOutlet weak var twity_four: UILabel!
     @IBOutlet weak var Sixty_jishi: UILabel!
     
+    @IBOutlet weak var match_news: UILabel!
     
     
     @IBOutlet weak var Score1: UITextField!
@@ -56,14 +69,30 @@ class ViewController: UIViewController {
         initUser()
     }
     
-    //点击保存
+    
     @IBAction func StartMatch(sender: AnyObject) {
         Score1.text = "000"
         Score2.text = "000"
         
         tf()
         Match_Time()
-        //saveUser()
+        CurrentTime()
+        
+    }
+    
+    
+    @IBAction func Match_Over(sender: AnyObject) {
+        //
+        var str:String="获得了胜利！"
+        saveUser()
+        if Int(Score1.text!)>Int(Score2.text!)
+        {
+            match_news.text = txtTeam1.text!+str
+        }
+        else
+        {
+            match_news.text = txtTeam2.text!+str
+        }
     }
     //显示保存结果
     @IBAction func Show(sender: AnyObject) {
@@ -183,7 +212,7 @@ class ViewController: UIViewController {
         var timeFormatter = NSDateFormatter()
         timeFormatter.dateFormat = "yyy-MM-dd 'at' HH:mm:ss.SSS"
         var strNowTime = timeFormatter.stringFromDate(date) as String
-        
+        time.text = strNowTime
     }
     
 
@@ -232,11 +261,88 @@ class ViewController: UIViewController {
         
     }
     
+    //加分操作
+    @IBAction func ADD1(sender: UIButton) {
+        grade1+=1;
+        Score1.text=String(grade1);
+        cancel1=1;
+    }
+    
+    @IBAction func ADD2(sender: UIButton) {
+        grade1+=2;
+        Score1.text=String(grade1);
+        cancel1=2;
+    }
+    
+    
+    @IBAction func ADD3(sender: UIButton) {
+        grade1+=3;
+        Score1.text=String(grade1);
+        cancel1=3;
+    }
+    
+    
+    @IBAction func BDD1(sender: UIButton) {
+        grade2+=1;
+        Score2.text=String(grade2);
+        cancel2=1;
+    }
+    
+    @IBAction func BDD2(sender: UIButton) {
+        grade2+=2;
+        Score2.text=String(grade2);
+        cancel2=2;
+    }
+    
+    
+    @IBAction func BDD3(sender: UIButton) {
+        grade2+=3;
+        Score2.text=String(grade2);
+        cancel2=3;
+    }
+    
+    @IBAction func RuleAdd(sender: UIButton) {
+        rule_1 += 1;
+        Rule1.text = String(rule_1)
+        //判断暂停次数限制
+    }
+    
+    
+    @IBAction func RuleBdd(sender: UIButton) {
+        rule_2 += 1;
+        Rule2.text = String(rule_2)
+        //判断暂停次数限制
+    }
+    
+    
+    
+    @IBAction func PauseAdd(sender: UIButton) {
+        pause_1 += 1;
+        Pause1.text = String(pause_1)
+        //判断犯规次数限制
+    }
+    
+    
+    @IBAction func PauseBdd(sender: UIButton) {
+        pause_2 += 1;
+        Pause2.text = String(pause_2)
+        //判断犯规次数限制
+        
+    }
+    
+    @IBAction func CancelA(sender: UIButton) {
+        Score1.text = String(Int(Score1.text!)! - cancel1);
+        grade1-=cancel1;
+    }
+    
+    @IBAction func CancelB(sender: UIButton) {
+        Score2.text = String(Int(Score2.text!)! - cancel2);
+        grade2-=cancel2;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

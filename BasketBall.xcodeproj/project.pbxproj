@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121855971D2222C6007116BD /* q.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 121855961D2222C6007116BD /* q.jpg */; };
 		121E3C071D1BEDCE00AB6608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C061D1BEDCE00AB6608 /* AppDelegate.swift */; };
 		121E3C091D1BEDCE00AB6608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C081D1BEDCE00AB6608 /* ViewController.swift */; };
 		121E3C0C1D1BEDCE00AB6608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121E3C0A1D1BEDCE00AB6608 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121855961D2222C6007116BD /* q.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = q.jpg; path = ../../q.jpg; sourceTree = "<group>"; };
 		121E3C031D1BEDCE00AB6608 /* BasketBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		121E3C061D1BEDCE00AB6608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		121E3C081D1BEDCE00AB6608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121855951D2222BD007116BD /* image */ = {
+			isa = PBXGroup;
+			children = (
+				121855961D2222C6007116BD /* q.jpg */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
 		121E3BFA1D1BEDCE00AB6608 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		121E3C051D1BEDCE00AB6608 /* BasketBall */ = {
 			isa = PBXGroup;
 			children = (
+				121855951D2222BD007116BD /* image */,
 				121E3C061D1BEDCE00AB6608 /* AppDelegate.swift */,
 				121E3C081D1BEDCE00AB6608 /* ViewController.swift */,
 				121E3C0A1D1BEDCE00AB6608 /* Main.storyboard */,
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				121E3C111D1BEDCE00AB6608 /* LaunchScreen.storyboard in Resources */,
+				121855971D2222C6007116BD /* q.jpg in Resources */,
 				121E3C381D1BEF4700AB6608 /* data.db in Resources */,
 				121E3C0E1D1BEDCE00AB6608 /* Assets.xcassets in Resources */,
 				121E3C0C1D1BEDCE00AB6608 /* Main.storyboard in Resources */,
@@ -513,6 +525,7 @@
 				121E3C2D1D1BEDCE00AB6608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		121E3C2E1D1BEDCE00AB6608 /* Build configuration list for PBXNativeTarget "BasketBallTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +534,7 @@
 				121E3C301D1BEDCE00AB6608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		121E3C311D1BEDCE00AB6608 /* Build configuration list for PBXNativeTarget "BasketBallUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +543,7 @@
 				121E3C331D1BEDCE00AB6608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
