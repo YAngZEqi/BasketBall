@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTn-s2-yBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310" y="630"/>
+            <point key="canvasLocation" x="298" y="630"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QUA-H5-hZM">
@@ -158,22 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOC-8G-3hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-21" y="630"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pQv-vZ-tgk">
-            <objects>
-                <viewController id="20j-Pi-PEV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ftY-Tv-Dwr">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XvU-kS-lTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-333" y="38"/>
+            <point key="canvasLocation" x="-26" y="630"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="afO-J4-jBF">
@@ -224,22 +209,14 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" id="cS9-3X-qCH"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BEH-Sj-5KV">
-                                <rect key="frame" x="0.0" y="205" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="Qix-cg-Uxc">
+                                <rect key="frame" x="0.0" y="212" width="320" height="105"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ToP-VU-qSy">
-                                <rect key="frame" x="81" y="205" width="185" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <date key="date" timeIntervalSinceReferenceDate="488777840.28937101">
+                                    <!--2016-06-28 03:37:20 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,12 +224,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zj-FV-2fK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="26"/>
+            <point key="canvasLocation" x="-26" y="26"/>
         </scene>
-        <!--View Controller-->
+        <!--Kan-->
         <scene sceneID="hTk-ZT-2Gh">
             <objects>
-                <viewController id="OPp-HN-yLu" sceneMemberID="viewController">
+                <viewController id="OPp-HN-yLu" customClass="kan" customModule="BasketBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XWO-tx-XuJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,6 +363,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtTeam1" destination="dj9-bf-2Tf" id="izg-wl-nkh"/>
+                        <outlet property="txtTeam2" destination="BTd-qo-JIM" id="hRq-uX-blr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YvP-aq-8Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,14 +388,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入队伍名称" borderStyle="line" textAlignment="center" minimumFontSize="17" id="EOM-pq-XjW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="EOM-pq-XjW">
                                 <rect key="frame" x="20" y="80" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入队伍名称" borderStyle="line" textAlignment="center" minimumFontSize="17" id="1Ta-Sd-ZEB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" id="1Ta-Sd-ZEB">
                                 <rect key="frame" x="183" y="80" width="117" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -637,15 +618,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title="结束比赛"/>
+                                <connections>
+                                    <action selector="Match_Over:" destination="BYZ-38-t0r" eventType="touchUpInside" id="San-Z3-P2d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tzg-tc-m0L">
                                 <rect key="frame" x="145" y="257" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title="暂停比赛"/>
-                                <connections>
-                                    <action selector="Match_Over:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5j-aA-l8E"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jsD-OW-w59">
                                 <rect key="frame" x="30" y="239" width="30" height="30"/>
@@ -767,6 +748,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mT8-ha-bp2"/>
-        <segue reference="y9t-v9-UiC"/>
+        <segue reference="abI-lV-j8T"/>
     </inferredMetricsTieBreakers>
 </document>

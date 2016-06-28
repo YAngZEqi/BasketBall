@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         //获取数据库实例
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists Match(uid integer primary key,Team1 varchar(20),Team2 varchar(20),mobile varchar(20))")
+        db.execute("create table if not exists Match2(uid integer primary key,Team1 varchar(20),Team2 varchar(20))")
         //如果有数据则加载
         initUser()
     }
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     @IBAction func Match_Over(sender: AnyObject) {
         //
         var str:String="获得了胜利！"
-        saveUser()
+        
         if Int(Score1.text!)>Int(Score2.text!)
         {
             match_news.text = txtTeam1.text!+str
@@ -93,6 +93,7 @@ class ViewController: UIViewController {
         {
             match_news.text = txtTeam2.text!+str
         }
+        saveUser()
     }
     //显示保存结果
     @IBAction func Show(sender: AnyObject) {
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
     
     //从SQLite加载数据
     func initUser() {
-        let data = db.query("select * from Match")
+        let data = db.query("select * from Match2")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
@@ -115,7 +116,7 @@ class ViewController: UIViewController {
         let team1 = self.txtTeam1.text!
         let team2 = self.txtTeam2.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into Match(Team1,Team2) values('\(team1)','\(team2)')"
+        let sql = "insert into Match2(Team1,Team2) values('\(team1)','\(team2)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
@@ -123,9 +124,11 @@ class ViewController: UIViewController {
     
     }
     
+    
+    
     //显示保存结果
     func ShowNews() {
-        let data = db.query("select * from Match")
+        let data = db.query("select * from Match2")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]

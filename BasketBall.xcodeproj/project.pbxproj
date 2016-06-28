@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		121855971D2222C6007116BD /* q.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 121855961D2222C6007116BD /* q.jpg */; };
+		121855A01D222E85007116BD /* kan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1218559F1D222E85007116BD /* kan.swift */; };
 		121E3C071D1BEDCE00AB6608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C061D1BEDCE00AB6608 /* AppDelegate.swift */; };
 		121E3C091D1BEDCE00AB6608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E3C081D1BEDCE00AB6608 /* ViewController.swift */; };
 		121E3C0C1D1BEDCE00AB6608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121E3C0A1D1BEDCE00AB6608 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		121855961D2222C6007116BD /* q.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = q.jpg; path = ../../q.jpg; sourceTree = "<group>"; };
+		1218559F1D222E85007116BD /* kan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kan.swift; sourceTree = "<group>"; };
 		121E3C031D1BEDCE00AB6608 /* BasketBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasketBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		121E3C061D1BEDCE00AB6608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		121E3C081D1BEDCE00AB6608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				121E3C0F1D1BEDCE00AB6608 /* LaunchScreen.storyboard */,
 				121E3C121D1BEDCE00AB6608 /* Info.plist */,
 				121E3C361D1BEE6D00AB6608 /* Header.h */,
+				1218559F1D222E85007116BD /* kan.swift */,
 			);
 			path = BasketBall;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				121E3C3F1D1BEFAA00AB6608 /* SQLiteDB.swift in Sources */,
 				121E3C401D1BEFAA00AB6608 /* SQLTable.swift in Sources */,
 				121E3C091D1BEDCE00AB6608 /* ViewController.swift in Sources */,
+				121855A01D222E85007116BD /* kan.swift in Sources */,
 				121E3C071D1BEDCE00AB6608 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
